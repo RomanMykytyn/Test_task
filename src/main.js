@@ -2,12 +2,8 @@ import './style/main.css';
 import React, { useState, useEffect } from 'react';
 import { render } from 'react-dom';
 import { NavLink } from 'react-router-dom';
-//import { Route } from 'react-router-dom';
 import ListUsers from './listUsers.js';
 import Friends from './friends.js';
-
-
-//import MainLayout from './components/mainLayout';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {

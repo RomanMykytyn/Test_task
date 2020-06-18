@@ -12,16 +12,12 @@ export default function ListUsers(props) {
 
 
   useEffect(() => {
-    //loadUsers();
-    //setLoadCount(loadCount + 1);
     loadAuthUser();
   }, []);
 
   useEffect(() => {
     if (!isSearch) {
-      //let shift = loadCount - 1 > 0 ? -1 : 0;
       loadUsers(-1);
-      //setLoadCount(loadCount + 1);
     }
   }, [isSearch]);
 
@@ -39,7 +35,6 @@ export default function ListUsers(props) {
   }
 
   const loadUsers = (shift = 0) => {
-    console.log(loadCount);
     let apiAddress = isSearch ? '/user/search' : '/user/loadUsers';
     let json = isSearch ? {searchStr: searchStr} : {loadCount: loadCount + shift};
     fetch(apiAddress, {method: 'POST',
@@ -50,7 +45,6 @@ export default function ListUsers(props) {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         setTotalNumUsers(data.number);
         setListUsers(data.list);
       });
@@ -82,7 +76,6 @@ export default function ListUsers(props) {
       .then((data) => {
         setListUsers(data.list);
         setIsSearch(true);
-        //setLoadCount(1);
       });
   }
 

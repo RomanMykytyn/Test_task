@@ -33,7 +33,6 @@ router.post('/loadUsers', checkAuthentication, function(req, res) {
 
 router.post('/search', checkAuthentication, function(req, res) {
   let keyword = req.body.searchStr.split(' ');
-  console.log(keyword);
   if (keyword.length === 1) {
     let rExp = new RegExp(`${keyword[0]}`, 'i');
     User.find({$or: [{name: rExp}, {surname: rExp}]}, function(err, docs) {

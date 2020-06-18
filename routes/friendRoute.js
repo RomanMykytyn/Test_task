@@ -77,13 +77,10 @@ router.post('/getAll', checkAuthentication, function(req, res) {
   let json = {};
   User.findById(req.body.id, function (err, doc) {
     User.find( { '_id': { $in: doc.outgoingReq} }, function(err, docs) {
-      //console.log(docs);
       json.outgoingReq = docs;
       User.find( { '_id': { $in: doc.incomingReq} }, function(err, docs) {
-        //console.log(docs);
         json.incomingReq = docs;
         User.find( { '_id': { $in: doc.friendship} }, function(err, docs) {
-          //console.log(docs);
           json.friendship = docs;
           console.log(json);
           return res.json(json);

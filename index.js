@@ -6,8 +6,6 @@ const loginRouter = require('./routes/loginRoute.js');
 const userRouter = require('./routes/userRoute.js');
 const friendRouter = require('./routes/friendRoute.js');
 const User = require('./schema/user.js');
-//const departmentRouter = require('./routes/department');
-//const lectorsRouter = require('./routes/lectors');
 const mongoose = require('mongoose');
 const LocalStrategy = require('passport-local').Strategy;
 const passport = require('passport');
@@ -22,7 +20,6 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 app.use(express.static('dist'));
 app.use(cookieParser());
-//app.use(express.static('dist'));
 app.use(express.json()) ;
 app.use(express.urlencoded({ extended: false }));
 app.use(session({
@@ -35,14 +32,11 @@ app.use(session({
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
-    //console.log(username);
     User.findOne({ login: username }, function (err, user) {
-      //console.log(user);
       if (err) {
         return done(err);
       }
       if (!user) {
-        //console.log('WWW');
         return done(null, false);
       }
        user.comparePassword(password, function(err, isMatch) {
@@ -76,10 +70,6 @@ app.use('/', indexRouter);
 app.use('/login', loginRouter);
 app.use('/user', userRouter);
 app.use('/friend', friendRouter);
-//app.use('/login', loginRouter);
-//app.use('/department', departmentRouter);
-//app.use('/lectors', lectorsRouter);
-
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!!!');
