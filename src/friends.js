@@ -40,7 +40,7 @@ export default function Friends(props) {
 
   return (
     <div className='friends-box'>
-      <div>
+      <div className='friends-field'>
         <h1>Pending request</h1>
         <h2>Incoming</h2>
         {!listsUsers.incomingReq.length &&

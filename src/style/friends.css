@@ -8,3 +8,7 @@ p {
   justify-content: flex-start;
   align-items: center;
 }
+
+.friends-field {
+  width: 800px;
+}
