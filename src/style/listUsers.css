@@ -1,0 +1,17 @@
+.list-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: calc(100vh - 70px);
+  overflow-y: scroll;
+}
+
+input {
+  width: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 20px;
+  border: 2px solid #282b2a;
+}

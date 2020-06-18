@@ -1,0 +1,40 @@
+.user-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+  margin-top: 25px;
+}
+
+.user-box > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.name-box {
+  width: 300px;
+}
+
+.btn {
+  width: 130px;
+  height: 50px;
+  background-color: white;
+  box-shadow: 2px 2px 0 2px black;
+  cursor: pointer;
+  border: 2px solid #282b2a;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 0 2px #a01b25;
+  border: 2px solid #a01b25;
+  color: #a01b25;
+}
+
+h3 {
+  width: 150px;
+}

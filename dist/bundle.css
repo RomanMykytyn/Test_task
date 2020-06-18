@@ -1,0 +1,104 @@
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  border-right: 2px solid #bbb;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.active {
+  background-color: #a01b25;
+}
+
+.hello-msg {
+  position: absolute;
+  right: 80px;
+}
+
+.exit-btn {
+  position: absolute;
+  border-right: none;
+  right: 10px;
+}
+
+.nav-elem:hover {
+  background-color: #73272a;
+}
+
+.list-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-height: calc(100vh - 70px);
+  overflow-y: scroll;
+}
+
+input {
+  width: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 20px;
+  border: 2px solid #282b2a;
+}
+
+.user-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+  margin-top: 25px;
+}
+
+.user-box > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.name-box {
+  width: 300px;
+}
+
+.btn {
+  width: 130px;
+  height: 50px;
+  background-color: white;
+  box-shadow: 2px 2px 0 2px black;
+  cursor: pointer;
+  border: 2px solid #282b2a;
+  outline: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 0 2px #a01b25;
+  border: 2px solid #a01b25;
+  color: #a01b25;
+}
+
+h3 {
+  width: 150px;
+}
+
+p {
+  margin-bottom: 100px;
+}
+
