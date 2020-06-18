@@ -39,36 +39,38 @@ export default function Friends(props) {
   }
 
   return (
-    <div className=''>
-      <h1>Pending request</h1>
-      <h2>Incoming</h2>
-      {!listsUsers.incomingReq.length &&
-        <p><i>You don't have any request</i></p>
-      }
-      {listsUsers.incomingReq.map(el => (<User authUser={authUser}
-                                               key={el._id}
-                                               updateUsers={updateUsers}
-                                               updateAuthUser={loadAuthUser}
-                                               user={el} />))}
-      <h2>Outgoing</h2>
-      {!listsUsers.outgoingReq.length &&
-        <p><i>You don't have any request</i></p>
-      }
-      {listsUsers.outgoingReq.map(el => (<User authUser={authUser}
-                                               key={el._id}
-                                               updateUsers={updateUsers}
-                                               updateAuthUser={loadAuthUser}
-                                               user={el} />))}
-      <hr />
-      <h1>Friends</h1>
-      {!listsUsers.friendship.length &&
-        <p><i>You don't have any friend</i></p>
-      }
-      {listsUsers.friendship.map(el => (<User authUser={authUser}
-                                              key={el._id}
-                                              updateUsers={updateUsers}
-                                              updateAuthUser={loadAuthUser}
-                                              user={el} />))}
+    <div className='friends-box'>
+      <div>
+        <h1>Pending request</h1>
+        <h2>Incoming</h2>
+        {!listsUsers.incomingReq.length &&
+          <p><i>You don't have any request</i></p>
+        }
+        {listsUsers.incomingReq.map(el => (<User authUser={authUser}
+                                                 key={el._id}
+                                                 updateUsers={updateUsers}
+                                                 updateAuthUser={loadAuthUser}
+                                                 user={el} />))}
+        <h2>Outgoing</h2>
+        {!listsUsers.outgoingReq.length &&
+          <p><i>You don't have any request</i></p>
+        }
+        {listsUsers.outgoingReq.map(el => (<User authUser={authUser}
+                                                 key={el._id}
+                                                 updateUsers={updateUsers}
+                                                 updateAuthUser={loadAuthUser}
+                                                 user={el} />))}
+        <hr />
+        <h1>Friends</h1>
+        {!listsUsers.friendship.length &&
+          <p><i>You don't have any friend</i></p>
+        }
+        {listsUsers.friendship.map(el => (<User authUser={authUser}
+                                                key={el._id}
+                                                updateUsers={updateUsers}
+                                                updateAuthUser={loadAuthUser}
+                                                user={el} />))}
+      </div>
     </div>
   );
 }
